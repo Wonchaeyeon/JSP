@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+<!-- DB정의 하는곳 -->
+<Resource maxWait="-1" 
+	maxIdle="10" 
+	maxActive="20" 
+	password="mirim2"
+ 	username="root" 
+ 	url="jdbc:mysql://localhost:3306/mydb" 
+ 	driverClassName="org.gjt.mm.mysql.Driver" 
+ 	type="javax.sql.DataSource" 
+ 	auth="container" name="jdbc/mydb"/>
+</Context>
