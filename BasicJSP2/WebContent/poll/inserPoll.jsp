@@ -12,7 +12,7 @@
 		<hr width="600" />
 		<b>설문작성</b>
 		<hr width="600" />
-		<form method="post" action="pollInsertProc.jsp">
+		<form method="post" action="insertPollPro.jsp">
 			<table border="1" width="500">
 				<tr>
 					<td><b>질문</b></td>
