@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 	<%@	page import = "java.sql.*" %>
 	<%@ page import="dbpool.MemberDbBean" %>
-		<%@ page import="dbpool.MemberBean" %>
+	<%@ page import="dbpool.MemberBean" %>
 	
 <!DOCTYPE html>
 <html>
@@ -10,25 +10,26 @@
 <meta charset="UTF-8">
 <title>회원정보 수정완료</title>
 </head>
-	<%	request.setCharacterEncoding("utf-8"); 
+	<%	
+	request.setCharacterEncoding("utf-8"); 
 	MemberBean regBean=new MemberBean();
+	
 	regBean.setId(request.getParameter("id"));
+	regBean.setId(request.getParameter("name"));
+	regBean.setId(request.getParameter("num1"));
+	regBean.setId(request.getParameter("num2"));
+	regBean.setId(request.getParameter("email"));
+	regBean.setId(request.getParameter("phone"));
+	regBean.setId(request.getParameter("zipcode"));
+	regBean.setId(request.getParameter("address"));
+	regBean.setId(request.getParameter("job"));
+	
 	MemberDbBean regDbBean=new MemberDbBean();
+
 		
-	%>
+	%>	
 	
-	
-	<jsp:setProperty name="regBean" property="id" />
-	<jsp:setProperty name="regBean" property="name" />
-	<jsp:setProperty name="regBean" property="num1" />
-	<jsp:setProperty name="regBean" property="num2" />
-	<jsp:setProperty name="regBean" property="email" />
-	<jsp:setProperty name="regBean" property="phone" />
-	<jsp:setProperty name="regBean" property="zipcode" />
-	<jsp:setProperty name="regBean" property="address" />
-	<jsp:setProperty name="regBean" property="job" />
 <% 
-	request.setCharacterEncoding("utf-8");
 	regDbBean.updateMember(regBean);
 %>
 	<body bgcolor="#FFFFCC">
@@ -38,7 +39,7 @@
 	<table border="1" width="80%" align="center" cellspacing="0" cellpadding="5">
 	<tr align="center" >
 	<td colspan="2"> <font color="#996600"><b>
-	<jsp:getProperty name="regBean" property="name"/>
+	<jsp:getProperty property="name" name="regBean"/>
 		회원님의 정보가 수정되었습니다. </b></font></td>
 		</tr>
 		<tr>

@@ -1,3 +1,4 @@
+<%@page import="dbpool.MemberBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
@@ -13,7 +14,7 @@
 <body bgcolor="#ffffcc">
 	<%
 		request.setCharacterEncoding("UTF-8");
-	
+		MemberBean regBean=new MemberBean();
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		int result=	regDbBean.selectId(id,pwd);

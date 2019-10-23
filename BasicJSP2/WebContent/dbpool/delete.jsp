@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="dbpool.MemberDbBean" %>
 <!DOCTYPE html>
 <html>
 <head>

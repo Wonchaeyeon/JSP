@@ -20,8 +20,9 @@
 <body bgcolor="#FFFFCC">
 	
 <% 
-	MemberBean regBean=new MemberBean();
+	MemberBean regBean;
 	MemberDbBean regDbBean=new MemberDbBean();
+	regBean = regDbBean.selectMember(id);
 %>
 </body>
 
