@@ -1,8 +1,8 @@
-<%@page import="dbpool.MemberBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@ page import="dbpool.MemberDbBean" %>
+	<%@ page import="dbpool.MemberBean" %>
 
 <!DOCTYPE html>
 <html>
@@ -10,11 +10,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:useBean id="regDbBean" class="jdbcbean.MemberDbBean"/>
 <body bgcolor="#ffffcc">
 	<%
 		request.setCharacterEncoding("UTF-8");
 		MemberBean regBean=new MemberBean();
+		MemberDbBean regDbBean=new MemberDbBean();
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		int result=	regDbBean.selectId(id,pwd);

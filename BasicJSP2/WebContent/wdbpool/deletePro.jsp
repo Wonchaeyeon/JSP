@@ -8,9 +8,11 @@
 <meta charset="UTF-8">
 <title>회원 탈회</title>
 </head>
-<jsp:useBean id="regDbBean" class="jdbcbean.MemberDbBean"/>
 <body  bgcolor="#ffffcc">
-<%request.setCharacterEncoding("UTF-8"); %>
+<%	
+	request.setCharacterEncoding("UTF-8"); 
+	MemberDbBean regDbBean=new MemberDbBean();
+	%>
 
 	<%
 		String id=(String)session.getAttribute("id");

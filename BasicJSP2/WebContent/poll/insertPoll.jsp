@@ -3,15 +3,15 @@
 <html>
 <head>
 <title>JSP Poll</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body bgcolor="#FFFFCC">
 	<div align="center">
 		<br />
 		<h2>투표프로그램</h2>
-		<hr width="600" />
+		<hr width="800" />
 		<b>설문작성</b>
-		<hr width="600" />
+		<hr width="800" />
 		<form method="post" action="insertPollPro.jsp">
 			<table border="1" width="500">
 				<tr>
@@ -23,9 +23,9 @@
 					<%
 						for (int i = 1; i <= 2; i++) {
 							out.println("<td>" + (i * 2 - 1)
-									+ ": <input name='answer" + i + "'></td>");
+									+ ": <input name='answer" + (i*2-1) + "'></td>");
 							out.println("<td>" + (i * 2)
-									+ ": <input name='answer" + i + "'></td>");
+									+ ": <input name='answer" + (i*2) + "'></td>");
 							out.println("</tr>");
 							if (i == 5) {
 								out.println("");
@@ -36,7 +36,7 @@
 					%>
 				<tr>
 					<td>시작일</td>
-					<td colspan="2"><select name="strtdateY">							
+					<td colspan="2"><select name="sdate">							
 							<option value="2019">2019
 							<option value="2020">2020
 					</select>년 <select name="sdateM">
@@ -45,7 +45,7 @@
 									out.println("<option value='" + i + "'>" + i);
 								}
 							%>
-					</select>월 <select name="strtdateD">
+					</select>월 <select name="sdateD">
 							<%
 								for (int i = 1; i <= 31; i++) {
 									out.println("<option value='" + i + "'>" + i);
@@ -55,16 +55,16 @@
 				</tr>
 				<tr>
 					<td>종료일</td>
-					<td colspan=2><select name="enddateY">
+					<td colspan=2><select name="edate">
 							<option value="2019">2019
 							<option value="2020">2020
-					</select>년 <select name="enddateM">
+					</select>년 <select name="edateM">
 							<%
 								for (int i = 1; i <= 12; i++) {
 									out.println("<option value='" + i + "'>" + i);
 								}
 							%>
-					</select>월 <select name="enddateD">
+					</select>월 <select name="edateD">
 							<%
 								for (int i = 1; i <= 31; i++) {
 									out.println("<option value='" + i + "'>" + i);

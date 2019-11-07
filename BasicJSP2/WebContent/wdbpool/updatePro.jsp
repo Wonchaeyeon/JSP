@@ -25,8 +25,7 @@
 	regBean.setId(request.getParameter("job"));
 	
 	MemberDbBean regDbBean=new MemberDbBean();
-
-		
+	
 	%>	
 	
 <% 
