@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FileSelect</title>
 </head>
 <body>
-<form name="frmName" method="post" action="ViewPage.jsp" enctype="multipart/foem-data">
+<form name="frmName" method="post" action="ViewPage.jsp" enctype="multipart/form-data">
 	user<br/>
 		<input type="text" name="user" ><br/>
 	title<br/>
 		<input type="text" name="title"><br/>
 	file<br/>
-		<input type="file" ><br/>
+		<input type="file" name="uploadFile"><br/>
 		<input type="submit" value="UPLOAD">
 </form>
 </body>
